@@ -220,12 +220,13 @@ def du_doan(nganh_khois, kq_tuyen_sinh_cu, kq_tuyen_sinh_moi, chi_tieu_diem_chua
             diem = nganh.diem_chuan_moi - 1 + dx4/4
             so_luong = tinh_so_sv_lay(diem, nganh)
             diem_soLuong.append({'diem': diem, 'so_luong': so_luong})
-        print(diem_soLuong)
+        # print(diem_soLuong)
         output.append({'maNganh': nganh.maNganh, 'tenNganh': nganh.tenNganh, 'chi_tieu_cu': nganh.chi_tieu_cu, \
         'diem_chuan_cu': nganh.diem_chuan_cu, 'diem_chuan_theo_pho_diem_moi': nganh.diem_chuan_theo_pho_diem_moi, \
          'chi_tieu_moi': nganh.chi_tieu_moi, 'diem_chuan_moi': nganh.diem_chuan_moi, 'so_sv_lay': nganh.so_sv_lay, \
          'ds_ketqua': diem_soLuong, 'diem_chuan_thuc_te': nganh.diem_chuan_thuc_te})
     json.dumps(output)
+    print(output)
     return (json.JSONEncoder().encode(output))
 if (__name__ == '__main__'):
     if (len(sys.argv) != 6):
