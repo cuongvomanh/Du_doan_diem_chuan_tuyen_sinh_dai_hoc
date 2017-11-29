@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dự đoán ngưỡng điểm theo ngành</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+		body {
+			background: url('bg.jpg') center center;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">Dự đoán ngưỡng điểm theo ngành</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="well">
+			<h3>Nhập dữ liệu đầu vào</h3>
+			<form id="form">
+				<div style="margin-top: 10px">
+					<div class="row">
+						<label class="control-label col-xs-3" for="nganh-khoi">File ngành khối:</label>
+						<div class="col-xs-9">
+							<input type="file" class="form-control" id="nganh-khoi" required>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 10px">
+					<div class="row">
+						<label class="control-label col-xs-3" for="nganh-chi-chuan">File ngành - chỉ tiêu - điểm chuẩn:</label>
+						<div class="col-xs-9">
+							<input type="file" class="form-control" id="nganh-chi-chuan" required>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 10px">
+					<div class="row">
+						<label class="control-label col-xs-3" for="khoi-diem-sl">File khối - điểm - số lượng:</label>
+						<div class="col-xs-9">
+							<input type="file" class="form-control" id="khoi-diem-sl" required>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary" id="submit">Gửi</button>
+			<form>
+		</div>
+		<div class="well">
+			<h3>Kết quả</h3>
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="form-group">
+						<label for="sel1">Chọn ngành:</label>
+						<select class="form-control" id="sel1">
+							<option>Ngành 1</option>
+							<option>Ngành 2</option>
+							<option>Ngành 3</option>
+							<option>Ngành 4</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-8">
+					<div>
+						<b>Mã ngành: </b>CNTT
+					</div>
+					<div>
+						<b>Tên ngành: </b>Công nghệ thông tin
+					</div>
+					<div>
+						<b>Chỉ Tiêu: </b>250
+					</div>
+				</div>
+			</div>
+			<div>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Điểm chuẩn</th>
+							<th>Dự kiến SV</th>
+							<th>Số lượng SV...</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>24</td>
+							<td>280 <b>(110%)</b></td>
+							<td>300 <b>(150%)</b></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
